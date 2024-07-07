@@ -1,0 +1,8 @@
+{
+    "C_Cpp.default.compilerPath": "D:\\msys64\\ucrt64\\bin\\gcc.exe",
+    "files.associations": {
+        "stdio.h": "c",
+        "socket.h": "c",
+        "in.h": "c"
+    }
+}

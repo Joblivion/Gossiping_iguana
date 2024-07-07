@@ -17,7 +17,9 @@
 
 int main()
 {
-    printf("Szia, szerver vagyok!\n");
+    int socket_descriptor = 0;
+    socket_descriptor= socket(0, 0, IPPROTO_TCP);
+    printf("socket_descriptor = %d\n", socket_descriptor);
 
     return 0;
 }
