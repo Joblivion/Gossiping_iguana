@@ -17,9 +17,16 @@
 
 int main()
 {
-    int socket_descriptor = 0;
-    socket_descriptor= socket(0, 0, IPPROTO_TCP);
-    printf("socket_descriptor = %d\n", socket_descriptor);
+    // CREATE SOCKET
+    int fd = 0;
+    // AF_LOCAL is for local comm., so I might have to change this later
+    fd= socket(AF_LOCAL, SOCK_STREAM, 0);
+    // debug print. Currently returrns 3, which is good
+    printf("socket_descriptor = %d\n", fd);
+
+    // BIND
+    const struct sockaddr *addr = malloc(sizeof(struct sockaddr));
+    bind(fd, );
 
     return 0;
 }
