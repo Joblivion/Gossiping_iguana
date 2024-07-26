@@ -2,7 +2,7 @@
 
 The Gossiping Iguana is a real-time chat app project written in C.
 
-This a learning project. Thus, I may not use already existing solutions for the sake of learning by trying. However, pieces of advice and hints are alway welcome.
+This a learning project. Thus, I may not use already existing solutions for the sake of learning. However, pieces of advice and hints are alway welcome.
 
 
 # Levels
@@ -15,7 +15,7 @@ This is an initial plan, and may change many times as I learn more on the subjec
 
 - [ ] achieve basic chatting on stdin/stdout
     - [x] understand the theory behind sockets
-    - [ ] send msg once inn both directions 
+    - [ ] send msg once in both directions 
     - [ ] use a server as a mediator
 
 ## Level 2 - create a database
