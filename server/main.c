@@ -17,16 +17,32 @@
 
 int main()
 {
-    // CREATE SOCKET
-    int fd = 0;
-    // AF_LOCAL is for local comm., so I might have to change this later
-    fd= socket(AF_LOCAL, SOCK_STREAM, 0);
-    // debug print. Currently returrns 3, which is good
-    printf("socket_descriptor = %d\n", fd);
+    int listen_fd = 0;
+    struct sockaddr_in server_addr;
+    struct sockaddr hali;
 
-    // BIND
-    const struct sockaddr *addr = malloc(sizeof(struct sockaddr));
-    bind(fd, );
+    char buff[1024];
+    
+    // CREATE SOCKET
+    listen_fd = socket(AF_INET, SOCK_STREAM, 0);
+    // fill them up with '0' characters. 
+    memset(&server_addr, '0', sizeof(server_addr));
+    memset(buff, '0', sizeof(buff));
+
+    // fill server address
+    server_addr.sin_family      = AF_INET;
+    // htonl converts arg from host byte order to network byte order (prob. big endian, as that's what TCP/IP uses)
+    // INADDR_ANY is 0x00000000 and is supposed to accept any incoming message. I don't understand this part. Shouldn't it be our address?
+    server_addr.sin_addr.s_addr = htonl(INADDR_ANY);
+	server_addr.sin_port        = htons(5000);
+
+    // Bind assigns data to the prev. created socket, this is clear. But why this cast is legit...
+    // I still have to study that!
+    if (0 != bind(listen_fd, (struct sockaddr*)&server_addr, sizeof(server_addr))) {
+        fprintf(stderr, "Error while binding listening socket.");
+    }
+
+    listen(listen_fd, 10);
 
     return 0;
 }
