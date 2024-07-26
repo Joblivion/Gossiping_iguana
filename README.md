@@ -53,3 +53,4 @@ This is for myself to keep track.
 
 - https://www.gnu.org/software/libc/manual/html_node/Sockets.html
 - https://www.mirrorfly.com/blog/chat-app-system-design/#:~:text=Chat%20app%20architecture%20is%20the,communication%20class%2C%20and%20client%20application.
+- https://gist.github.com/browny/5211329
