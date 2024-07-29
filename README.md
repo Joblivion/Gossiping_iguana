@@ -7,7 +7,7 @@ This a learning project. Thus, I may not use already existing solutions for the 
 
 # Levels
 
-I set achievement levels for myself. The further I get, the more realistic the chat app will become. Each level is supposed to add functionality and evolve the app to a more usable level. You can read about the goals for each level, and check the current stage of the profect below. 
+I set achievement levels for myself. The further I get, the more realistic the chat app will become. Each level is supposed to add functionality and evolve the app to a more usable level. You can read about the goals for each level, and check the current stage of the project below. 
 
 This is an initial plan, and may change many times as I learn more on the subject.
 
